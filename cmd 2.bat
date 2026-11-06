@@ -106,3 +106,5 @@ schtasks /Change /TN "Microsoft\Windows\Windows Defender\Scheduled Scan"        
 schtasks /Change /TN "Microsoft\Windows\Windows Defender\Windows Defender Cache Maintenance" /Disable
 schtasks /Change /TN "Microsoft\Windows\Windows Defender\Windows Defender Verification"/Disable
 schtasks /Change /TN "Microsoft\Windows\Windows Defender\Windows Defender Cleanup"  /Disable
+
+exit
